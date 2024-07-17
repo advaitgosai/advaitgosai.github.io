@@ -51,7 +51,7 @@ p {
 }
 
 .link {
-    color: #2E8B57;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
