@@ -67,7 +67,7 @@ p {
 }
 
 nav a {
-    font-weight: 500;
+    font-weight: 400;
     font-family: "IBM Plex Mono", monospace;
     color: var(--accent-color);
     padding: 0;
