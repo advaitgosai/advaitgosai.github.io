@@ -8,9 +8,11 @@
 }
 
 :root {
-    --primary-color: #000000;
+    --primary-color: black;
     --secondary-color: white;
-    --accent-color: #2E8B57;
+    --tertiary-color: #bc6c25;
+    --accent-color: #2E8B57; /*246eb9*/
+    --accent-color-two: #fdf0d5;
     --container-max-width: 850px;
 }
 
@@ -51,7 +53,7 @@ p {
 }
 
 .sticker {
-    color: white;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 300;
     background-color: var(--accent-color);
@@ -60,13 +62,19 @@ p {
 }
 
 .sticker.imp {
-    background-color: #bc6c25;
+    background-color: var(--accent-color-two);
+    color: var(--tertiary-color);
+    /* opacity: 85%; */
 }
 
 .link {
-    color: #2E8B57;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 300;
+}
+
+.link.imp {
+    color: var(--tertiary-color);
 }
 
 nav a {
