@@ -11,7 +11,7 @@
     --primary-color: black;
     --secondary-color: white;
     --tertiary-color: #bc6c25;
-    --accent-color: #2E8B57; /*246eb9*/
+    --accent-color: #2E8B57;
     --accent-color-two: #fdf0d5;
     --container-max-width: 850px;
 }
@@ -29,6 +29,8 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
 }
 
 .container {
@@ -38,18 +40,24 @@ body, html {
     text-align: justify;
     text-justify: inter-word;
     word-spacing: -2px;
-    
 }
 
 h1 {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 1.5rem;
+    margin: 0;
 }
 
 p {
     margin-bottom: 1.5rem;
     line-height: 1.6;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 1px solid var(--primary-color);
 }
 
 .sticker {
@@ -64,13 +72,12 @@ p {
 .sticker.imp {
     background-color: var(--accent-color-two);
     color: var(--tertiary-color);
-    /* opacity: 85%; */
 }
 
 .link {
     color: var(--accent-color);
     text-decoration: none;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 .link.imp {
@@ -78,7 +85,7 @@ p {
 }
 
 nav a {
-    font-weight: 400;
+    font-weight: bold;
     font-family: "IBM Plex Mono", monospace;
     color: var(--accent-color);
     padding: 0;
@@ -96,6 +103,7 @@ nav.bot a {
 li {
     margin-top: 5px;
     margin-left: -10px;
+    line-height: 1.5;
 }
 
 .pages {
@@ -116,7 +124,7 @@ li {
     0% {
       opacity: 0;
     }
-  }
+}
 
 @media (max-width: 767px) {
     body, html {
@@ -127,8 +135,22 @@ li {
         padding: 0.9rem;
     }
 
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.top {
+        margin-top: 0.5rem;
+    }
+
     nav.top a {
-        margin-left: 0.8rem;
+        margin-left: 0;
+        margin-right: 0.8rem;
+    }
+
+    nav.top a:last-child {
+        margin-right: 0;
     }
 
     li {
